@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotivos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Pacifico&family=Roboto:ital@0;1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="build/style/main.css">
+</head>
+
+
+<body>
+    <header id="header">
+        <div class="container">
+
+            <div class="logo">
+                <h1>AutoMoveis</h1>
+            </div>
+
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <a href="#sobre">Sobre</a>
+                    </li>
+                    <li>
+                        <a href="#veiculos">Veículos</a>
+                    </li>
+                    <li>
+                        <a href="#contato">Contato</a>
+                    </li>
+                </ul>
+               
+                   
+                <div class="menu-hamburguer" onclick="menuAparecer()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                </div>
+                <div class="mobile-menu">
+              
+                        <ul class="menu">
+                            <li>
+                                <a href="#">Veículos</a>
+                            </li>
+                            <li>
+                                <a href="#">Sobre</a>
+                            </li>
+                            <li>
+                                <a href="#">Contato</a>
+                            </li>
+                        </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="home">
+            <div class="container">
+                <h2>AutoMoveis</h2>
+                <p>"Onde o luxo encontra a estrada."</p>
+            </div>
+        </section>
+
+
+        <section id="sobre">
+            <div class="container">
+                <img src="images/garagem.jpg" alt="">
+                <div class="sobre-descricao">
+                    <h2>Sobre a loja</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo facilis sapiente fugiat doloribus
+                        atque molestiae deleniti accusantium porro consequuntur aliquid accusamus, officiis cumque illum
+                        totam architecto doloremque similique a praesentium.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="veiculos">
+            <h2 class="text-colored">Veículos</h2>
+
+            <div class="grid">
+                <div class="container">
+                    <div class="descricao">
+                        <h2>Honda Civic Type R</h2>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, corporis pariatur accusamus
+                            dicta
+                            at eveniet, molestiae qui, explicabo earum ut perferendis alias. Eligendi molestias, iusto
+                            omnis
+                            deleniti vel maxime ratione.
+                        <ul class="cores">
+                            <li id="corAzul" onclick="alterarCor('/images/hondaCivicAzul.png')"></li>
+                            <li id="corVermelha" onclick="alterarCor('/images/hondaCivicVermelhol.png')"></li>
+                            <li id="corPreta" onclick="alterarCor('/images/hondaCivicPreto.png')"></li>
+                        </ul>
+                        </p>
+                    </div>
+                    <div class="veiculo">
+                        <img id="carro" src="images/hondaCivicAzul.png" alt="Honda Civic">
+
+                    </div>
+
+                </div>
+                <hr>
+                <div class="container">
+                    <div class="descricao">
+                        <h2>Honda Civic Type R</h2>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, corporis pariatur accusamus
+                            dicta
+                            at eveniet, molestiae qui, explicabo earum ut perferendis alias. Eligendi molestias, iusto
+                            omnis
+                            deleniti vel maxime ratione.
+                        <ul class="cores">
+                            <li id="corBranca" onclick="alterarCor2('/images/hondaCivicHibridoBranco.png')"></li>
+                            <li id="corCinza" onclick="alterarCor2('/images/hondaCivicHibridoCinza.png')"></li>
+                            <li id="corPreta" onclick="alterarCor2('/images/hondaCivicHibridoPreto.png')"></li>
+                        </ul>
+                        </p>
+                    </div>
+                    <div class="veiculo">
+                        <img id="carro2" src="images/hondaCivicHibridoBranco.png" alt="Honda Civic">
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section id="contato">
+            <div class="container">
+                <h2>Entre em contato</h2>
+                <form action="">
+                    <div class="form-campo">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome">
+                    </div>
+                    <div class="form-campo">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone">
+                    </div>
+                    <div class="form-campo">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="form-campo">
+                        <label for="veículo-interesse">Veículo de interesse:</label>
+                        <input type="text" id="veículo-interesse" name="veículoDeInteresse">
+                    </div>
+                    <div class="form-campo">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem"></textarea>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container container-flex">
+            <p>2024 &copy; By-Carlos</p>
+
+        </div>
+    </footer>
+</body>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="main.js"></script>
+
+</html>

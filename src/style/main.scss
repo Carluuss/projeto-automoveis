@@ -1,0 +1,383 @@
+@use 'variaveis';
+@use 'reset';
+@use 'sass:math';
+
+@function pixelParaEm($alvoEmPixel, $contextoEmPixel: 16px) {
+    @return math.div($alvoEmPixel, $contextoEmPixel)+em;
+}
+
+
+@mixin fontTitulo () {
+    font-family: "Orbitron", sans-serif;
+    text-shadow: #000 4px 0px;
+
+}
+
+@mixin coresVeiculos () {
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    margin-left: 1em;
+    border: 5px solid #fff;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgba(0, 0, 0, 0.4)url(../../images/planoDeFundo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top top;
+    background-blend-mode: darken;
+    color: variaveis.$corDoTexto;
+}
+
+header {
+    top: 0;
+    left: 0;
+    position: sticky;
+    transition: ease-in .5s;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+    }
+}
+
+
+
+li {
+    list-style: none;
+}
+
+h1 {
+    @include fontTitulo();
+
+}
+
+.menu {
+    display: flex;
+
+
+    li {
+        font-weight: bold;
+        margin-left: 24px;
+
+    }
+
+    a {
+        transition: ease .5s;
+        text-decoration: none;
+        color: variaveis.$corDoTexto;
+
+        &:hover {
+            padding-bottom: 5px;
+            color: lighten(variaveis.$corSecundaria, 15%);
+        }
+    }
+}
+
+section {
+    padding: 56px 0;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 356px 0;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 13em;
+
+    h2 {
+        @include fontTitulo();
+    }
+
+    p {
+        @include fontTitulo();
+    }
+}
+
+#sobre {
+    background-color: variaveis.$corSecundaria;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+
+    img {
+        border-radius: 20px;
+        width: 30em;
+    }
+}
+
+#veiculos {
+    background-color: variaveis.$corSecundaria;
+    padding: 0;
+    color: #000;
+
+    h2 {
+        text-align: center;
+    }
+
+
+    .container {
+        display: flex;
+        align-items: center;
+        padding: 16px 0;
+    }
+
+    img {
+        display: block;
+        width: 39em;
+    }
+
+}
+
+
+.rolagem {
+    background-color: variaveis.$corPrimaria;
+}
+
+.descricao {
+
+    color: variaveis.$corDoTexto;
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin-right: 10px;
+    }
+}
+
+.text-colored {
+    color: variaveis.$corDoTexto;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #fff;
+}
+
+#contato {
+    background-color: variaveis.$corSecundaria;
+}
+
+@mixin inputCampo (){
+    width: 100%;
+    display: block;
+    padding: 8px;
+}
+.form-campo{
+    margin-bottom: 16px;
+
+    label {
+        font-weight: bold;
+    display: block;
+    }
+
+    input {
+        @include inputCampo();
+    }
+
+    textarea {
+        @include inputCampo();
+        resize: none;
+    height: 120px;
+    }
+}
+
+
+form {
+    width: 360px;
+    button {
+    max-width: 120px;
+
+    }
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color: #119579;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: .5s;
+    &:hover {
+        background-color: lighten(#119579, 15%);
+    }
+}
+
+footer {
+    background-color: variaveis.$corPrimaria;
+}
+
+.cores {
+    padding: pixelParaEm(80px) 0;
+    margin: 0 auto;
+    display: flex;
+}
+
+#corAzul {
+    background-color: #007aff;
+    @include coresVeiculos();
+}
+
+#corVermelha {
+    background-color: #ff0000;
+    @include coresVeiculos();
+}
+
+#corPreta {
+    background-color: #000;
+    @include coresVeiculos();
+}
+
+#corBranca {
+    background-color: #ddd4d4;
+    @include coresVeiculos();
+}
+
+#corCinza {
+    background-color: #383535;
+    @include coresVeiculos();
+}
+
+.menu-hamburguer {
+    cursor: pointer;
+    width: 32px;
+    display: none;
+
+    span {
+        height: 2px;
+        width: 100%;
+        background-color: #fff;
+        display: block;
+        margin-bottom: 4px;
+    }
+}
+
+
+
+.mobile-menu {
+    display: none;
+}
+
+@media screen and (max-width: variaveis.$tablet) {
+
+header {}
+
+    .container {
+
+        max-width: 50%;
+    }
+
+    #sobre {
+        .sobre-descricao {
+            margin-bottom: 10px;
+        }
+        .container {
+
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+
+    #veiculos {
+        img {
+            display: block;
+            width: 20em
+        }
+
+    }
+}
+
+@media screen and (max-width: variaveis.$mobile) {
+
+    header {
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+    nav {
+        margin-left: 60px;
+        .menu {
+            display: none;
+        }
+    }
+
+    .menu-hamburguer {
+        display: block;
+    }
+
+    .mobile-menu {
+        ul {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding-bottom: 1rem;
+        }
+
+        li {
+            padding: 1rem;;
+        }
+    }
+
+    .open{
+        display: block;
+    }
+
+    .container {
+        flex-direction: column;
+        display: flex;
+        max-width: 80%;
+
+    }
+
+    body {
+        background-size: cover;
+        background-position: top top;
+    }
+
+    #home {
+        font-size: 2em;
+    }
+
+    #sobre {
+        .container {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        img {
+            width: 20em;
+        }
+    }
+
+    #veiculos {
+        img {
+            width: 20em;
+        }
+
+    }
+}
