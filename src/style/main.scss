@@ -33,15 +33,12 @@ html {
 }
 
 body {
-    background: rgba(0, 0, 0, 0.4)url(../../images/planoDeFundo.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top top;
-    background-blend-mode: darken;
+    
     color: variaveis.$corDoTexto;
 }
 
 header {
+    background-color: transparent;
     top: 0;
     left: 0;
     position: sticky;
@@ -92,14 +89,21 @@ section {
     padding: 56px 0;
 }
 
+.fundoSite {
+    background: rgba(0, 0, 0, 0.4)url(../../images/planoDeFundo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-blend-mode: darken;
+    
+}
+
 #home {
     display: flex;
     flex-direction: column;
     padding: 356px 0;
     text-align: center;
     font-size: 2.5em;
-    margin-bottom: 13em;
-
     h2 {
         @include fontTitulo();
     }
