@@ -1,0 +1,331 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: rgba(0, 0, 0, 0.4) url(../../images/planoDeFundo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top top;
+  background-blend-mode: darken;
+  color: #f5f6fa;
+}
+
+header {
+  top: 0;
+  left: 0;
+  position: sticky;
+  transition: ease-in 0.5s;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  font-family: "Orbitron", sans-serif;
+  text-shadow: #000 4px 0px;
+}
+
+.menu {
+  display: flex;
+}
+.menu li {
+  font-weight: bold;
+  margin-left: 24px;
+}
+.menu a {
+  transition: ease 0.5s;
+  text-decoration: none;
+  color: #f5f6fa;
+}
+.menu a:hover {
+  padding-bottom: 5px;
+  color: #2a4791;
+}
+
+section {
+  padding: 56px 0;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  padding: 356px 0;
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 13em;
+}
+#home h2 {
+  font-family: "Orbitron", sans-serif;
+  text-shadow: #000 4px 0px;
+}
+#home p {
+  font-family: "Orbitron", sans-serif;
+  text-shadow: #000 4px 0px;
+}
+
+#sobre {
+  background-color: #192a56;
+}
+#sobre .container {
+  display: grid;
+  grid-template-columns: repeat(2, 48.5%);
+  column-gap: 3%;
+}
+#sobre img {
+  border-radius: 20px;
+  width: 30em;
+}
+
+#veiculos {
+  background-color: #192a56;
+  padding: 0;
+  color: #000;
+}
+#veiculos h2 {
+  text-align: center;
+}
+#veiculos .container {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+}
+#veiculos img {
+  display: block;
+  width: 39em;
+}
+
+.rolagem {
+  background-color: #2f3640;
+}
+
+.descricao {
+  color: #f5f6fa;
+}
+.descricao h2 {
+  margin-bottom: 10px;
+}
+.descricao p {
+  margin-right: 10px;
+}
+
+.text-colored {
+  color: #f5f6fa;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #fff;
+}
+
+#contato {
+  background-color: #192a56;
+}
+
+.form-campo {
+  margin-bottom: 16px;
+}
+.form-campo label {
+  font-weight: bold;
+  display: block;
+}
+.form-campo input {
+  width: 100%;
+  display: block;
+  padding: 8px;
+}
+.form-campo textarea {
+  width: 100%;
+  display: block;
+  padding: 8px;
+  resize: none;
+  height: 120px;
+}
+
+form {
+  width: 360px;
+}
+form button {
+  max-width: 120px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+  background-color: #119579;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+button:hover {
+  background-color: #19dab1;
+}
+
+footer {
+  background-color: #2f3640;
+}
+
+.cores {
+  padding: 5em 0;
+  margin: 0 auto;
+  display: flex;
+}
+
+#corAzul {
+  background-color: #007aff;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  margin-left: 1em;
+  border: 5px solid #fff;
+  cursor: pointer;
+}
+
+#corVermelha {
+  background-color: #ff0000;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  margin-left: 1em;
+  border: 5px solid #fff;
+  cursor: pointer;
+}
+
+#corPreta {
+  background-color: #000;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  margin-left: 1em;
+  border: 5px solid #fff;
+  cursor: pointer;
+}
+
+#corBranca {
+  background-color: #ddd4d4;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  margin-left: 1em;
+  border: 5px solid #fff;
+  cursor: pointer;
+}
+
+#corCinza {
+  background-color: #383535;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  margin-left: 1em;
+  border: 5px solid #fff;
+  cursor: pointer;
+}
+
+.menu-hamburguer {
+  cursor: pointer;
+  width: 32px;
+  display: none;
+}
+.menu-hamburguer span {
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .container {
+    max-width: 50%;
+  }
+  #sobre .sobre-descricao {
+    margin-bottom: 10px;
+  }
+  #sobre .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #veiculos img {
+    display: block;
+    width: 20em;
+  }
+}
+@media screen and (max-width: 767px) {
+  header .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  nav {
+    margin-left: 60px;
+  }
+  nav .menu {
+    display: none;
+  }
+  .menu-hamburguer {
+    display: block;
+  }
+  .mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+  .mobile-menu li {
+    padding: 1rem;
+  }
+  .open {
+    display: block;
+  }
+  .container {
+    flex-direction: column;
+    display: flex;
+    max-width: 80%;
+  }
+  body {
+    background-size: cover;
+    background-position: top top;
+  }
+  #home {
+    font-size: 2em;
+  }
+  #sobre .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #sobre img {
+    width: 20em;
+  }
+  #veiculos img {
+    width: 20em;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
